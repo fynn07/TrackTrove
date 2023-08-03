@@ -1,4 +1,5 @@
 import tkinter
+import os
 from tkinter import filedialog
 from app import download_album, download_playlist, download_song
 
@@ -17,6 +18,7 @@ def download_click():
         success = download_album(spotify_link, destination)
         if success == 1:
             state_label.config(text="The album has successfully downloaded.")
+            os.startfile(destination)
         elif success == 0:
             state_label.config(text="Invalid Link...")
 
@@ -24,6 +26,7 @@ def download_click():
         success = download_song(spotify_link, destination)
         if success == 1:
             state_label.config(text="The Song has successfully downloaded.")
+            os.startfile(destination)
         elif success == 0:
             state_label.config(text="Invalid Link...")
 
@@ -31,6 +34,7 @@ def download_click():
         success = download_playlist(spotify_link, destination)
         if success == 1:
             state_label.config(text="The playlist has successfully downloaded.")
+            os.startfile(destination)
         elif success == 0:
             state_label.config(text="Invalid Link...")
 
