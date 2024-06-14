@@ -257,4 +257,4 @@ def download_album(spotify_link, destination):
 
 #END
 
-
+#IMPLEMENTATION OF COPY
